@@ -1,12 +1,13 @@
 package main
 
 import (
-	"github.com/jpillora/puzzler/harness/aoc"
 	"fmt"
-	"strings"
-	"strconv"
 	"math"
 	"slices"
+	"strconv"
+	"strings"
+
+	"github.com/jpillora/puzzler/harness/aoc"
 )
 
 func main() {
@@ -18,7 +19,7 @@ func run(part2 bool, input string) any {
 
 	var s1 []float64
 	var s2 []float64
-	for _, line := range strings.Split(strings.TrimSpace(input), "\n"){
+	for _, line := range strings.Split(strings.TrimSpace(input), "\n") {
 		pair := strings.SplitN(line, " ", 2)
 		s1 = append(s1, toInt(pair[0]))
 		s2 = append(s2, toInt(pair[1]))
@@ -34,19 +35,19 @@ func run(part2 bool, input string) any {
 		for i := range s2 {
 			m2[s2[i]] += 1
 		}
-		for k, v := range m1{
-			result += k * float64(m2[k] * v)
-		}		
+		for k, v := range m1 {
+			result += k * float64(m2[k]*v)
+		}
 		fmt.Printf("%f\n", result)
 		return result
 	}
 	if len(s1) == len(s2) {
-        for i := range s1 {
-            result += math.Abs(s1[i] - s2[i])
-        }
-    }
+		for i := range s1 {
+			result += math.Abs(s1[i] - s2[i])
+		}
+	}
 	// solve part 1 here
-	
+
 	fmt.Printf("%f\n", result)
 	return result
 }
