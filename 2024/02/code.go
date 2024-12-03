@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/jpillora/puzzler/harness/aoc"
-	//"fmt"
 	"math"
 	"slices"
 	"strconv"
 	"strings"
+
+	"github.com/jpillora/puzzler/harness/aoc"
 )
 
 func main() {
