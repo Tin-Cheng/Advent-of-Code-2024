@@ -64,8 +64,8 @@ func run(part2 bool, input string) any {
 			dataI, size := data[i].I, data[i].V
 			if size > 0 {
 				if checkSpace(spaces, size, s, dataI) {
-					newSpace := pair{dataI, size}
-					insertSpace(spaces, newSpace)
+					//newSpace := pair{dataI, size}
+					//insertSpace(spaces, newSpace)
 				}
 			}
 		}
